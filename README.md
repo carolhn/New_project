@@ -79,6 +79,8 @@ No arquivo package.json vamos criar um novo script para rodar o `ts-node-dev`.
 
 #### 2.5 Executar o servidor.
 
+No terminal vamos rodar o comando.
+
 ```sh
 npm run dev
 ```
