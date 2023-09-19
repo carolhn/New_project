@@ -136,17 +136,19 @@ build
 
 #### 3.4 Criando um Script de Desenvolvimento.
 
-Adicione um script no arquivo package.json para executar o linting:
+Adicione scripts no arquivo package.json para executar o lint e corrigir automaticamente os problemas:
 
 ```sh
 "scripts": {
-  "lint": "eslint . --ext .ts"
+  "lint": "eslint . --ext .ts",
+  "lint-fix": "eslint . --ext .ts --fix"
 ```
 
 #### 3.5 Executando o Lint.
 
-Agora, você pode executar o linting do seu projeto usando o seguinte comando:
+Agora, você pode executar o lint do seu projeto ou executar uma correção automática dos problemas com os seguintes comandos:
 
 ```sh
 npm run lint
+npm run lint-fix
 ```
