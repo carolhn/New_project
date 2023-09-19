@@ -5,9 +5,9 @@
 ## Passo a Passo:
 
 <details>
-  <summary><strong>1. Iniciando a aplicação.</strong></summary>
+  <summary><strong>1. Iniciando e configurando a aplicação.</strong></summary>
 
-Primeiro, inicie sua aplicação instalando o NodeJS Package.json, que auxilia no gerenciamento de pacotes do projeto.
+Primeiro, inicie sua aplicação instalando o Node Package.json, que auxilia no gerenciamento de pacotes do projeto.
 
 ```sh
 npm init -y
@@ -29,8 +29,58 @@ Em seguida, configure o TypeScript executando o seguinte comando para criar o ar
 npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true
 ```
 
-#### 1.3 Criando o arquivo.gitignore.
+#### 1.3 Criando o arquivo .gitignore.
 
 Ele ajudar a manter o controle de versão limpo e evita que arquivos desnecessários ou sensíveis sejam incluídos acidentalmente no repositório.
 
 </details>
+<details>
+  <summary><strong>2. Compilando o Projeto.</strong></summary>
+Criar a pasta `src` e o arquivo `server.ts`.
+
+```sh
+mkdir src
+touch src/server.ts
+```
+
+#### 2.1 Compilando o Typescript.
+
+No nosso `server.ts` vamos adicionar um código para ser compilado.
+
+```sh
+console.log('Hello World!')
+```
+
+#### 2.2 Executando o TSC.
+
+Em seguida vamos executar o comando `tsc`, que irá ler o arquivo tsconfig.json no diretório atual e aplicará a configuração ao compilador TypeScript para gerar o código JavaScript compilado.
+
+```sh
+npx tsc
+```
+
+#### 2.3 Compilando código.
+
+O código compilado foi gerado na pasta `build`, para executar precisamos utilizar o comando.
+
+```sh
+node build/server.js
+```
+
+#### 2.4 Criando Script.
+
+Vamos utilizar a biblioteca `ts-node-dev` para execução da aplicação em desenvolvimento.
+No arquivo package.json vamos criar um novo script para rodar o `ts-node-dev`.
+
+```sh
+"scripts": {
+  "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts"
+```
+
+#### 2.5 Executar o servidor.
+
+No terminal vamos rodar o comando.
+
+```sh
+npm run dev
+```
