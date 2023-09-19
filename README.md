@@ -93,20 +93,20 @@ npm run dev
 </details>
 
 <details>
-  <summary><strong>3. Instalando ESLint.</strong></summary>
-ESLint é um linter JavaScript que permite que você aplique um conjunto de padrões de estilo, formatação e codificação para sua base de código.
+  <summary><strong>3. Configurando o ESLint.</strong></summary>
+O ESLint é uma ferramenta de linting JavaScript que permite aplicar um conjunto de padrões de estilo, formatação e codificação ao seu código.
 
-#### 3.1 Instalação e Configuração do ESLint.
+#### 3.1 Instalação e Configuração do ESLint
 
-Instalação do ESLint no projeto.
+Comece instalando o ESLint no seu projeto com o seguinte comando:
 
 ```sh
 npx npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
-#### 3.2 Criar o arquivo .eslintrc
+#### 3.2 Criando o arquivo .eslintrc
 
-Na raiz do seu projeto crie um arquivo .eslintrc com uma configuração inicial do ESLint.
+Na raiz do seu projeto, crie um arquivo chamado .eslintrc com uma configuração inicial do ESLint. Você pode adicionar as seguintes configurações:
 
 ```sh
 {
@@ -123,9 +123,9 @@ Na raiz do seu projeto crie um arquivo .eslintrc com uma configuração inicial 
 }
 ```
 
-#### 3.3 Criar o arquivo .eslintignore
+#### 3.3 Criando o arquivo .eslintignore
 
-Adicionar ao arquivo os comandos abaixo.
+Crie um arquivo chamado .eslintignore e adicione os seguintes comandos para evitar que determinados diretórios e arquivos sejam verificados pelo ESLint:
 
 ```sh
 node_modules
@@ -136,16 +136,16 @@ build
 
 #### 3.4 Criando um Script de Desenvolvimento.
 
-Adicionar um script no arquivo package.json para executar o lint:
+Adicione um script no arquivo package.json para executar o linting:
 
 ```sh
 "scripts": {
   "lint": "eslint . --ext .ts"
 ```
 
-#### 3.5 Executando o Servidor em Modo de Desenvolvimento.
+#### 3.5 Executando o Lint.
 
-Execute o script e verifique que nenhum erro deve ser retornado.
+Agora, você pode executar o linting do seu projeto usando o seguinte comando:
 
 ```sh
 npm run lint
