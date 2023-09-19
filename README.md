@@ -9,10 +9,10 @@ Este repositório é um guia de configuração básica para iniciar um projeto. 
 Para rodar a aplicação em sua maquina.
 
 1. Clone o repositorio. Use o comando:</br>
-   <code>git clone git@github.com:carolhn/New_project.git</code></br>
+   <code>git clone git@github.com:carolhn/Project-config-base.git</code></br>
 
 2. Entre na pasta do repositório que você acabou de clonar:</br>
-   <code>cd New_project</code>
+   <code>cd Project-config-base</code>
 
 3. Instale as dependências</br>
    <code>npm install</code>
