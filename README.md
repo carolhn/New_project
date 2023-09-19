@@ -35,6 +35,7 @@ npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModul
 Para manter seu controle de versão limpo e evitar a inclusão acidental de arquivos desnecessários ou sensíveis, crie e configure o arquivo .gitignore.
 
 </details>
+
 <details>
   <summary><strong>2. Compilando o Projeto.</strong></summary>
 Nesta seção, vamos compilar o projeto e executá-lo.
@@ -87,4 +88,65 @@ Finalmente, no terminal, execute o comando a seguir para iniciar o servidor em m
 
 ```sh
 npm run dev
+```
+
+</details>
+
+<details>
+  <summary><strong>3. Instalando ESLint.</strong></summary>
+ESLint é um linter JavaScript que permite que você aplique um conjunto de padrões de estilo, formatação e codificação para sua base de código.
+
+#### 3.1 Instalação e Configuração do ESLint.
+
+Instalação do ESLint no projeto.
+
+```sh
+npx npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
+```
+
+#### 3.2 Criar o arquivo .eslintrc
+
+Na raiz do seu projeto crie um arquivo .eslintrc com uma configuração inicial do ESLint.
+
+```sh
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ]
+}
+```
+
+#### 3.3 Criar o arquivo .eslintignore
+
+Adicionar ao arquivo os comandos abaixo.
+
+```sh
+node_modules
+dist
+build
+/*.js
+```
+
+#### 3.4 Criando um Script de Desenvolvimento.
+
+Adicionar um script no arquivo package.json para executar o lint:
+
+```sh
+"scripts": {
+  "lint": "eslint . --ext .ts"
+```
+
+#### 3.5 Executando o Servidor em Modo de Desenvolvimento.
+
+Execute o script e verifique que nenhum erro deve ser retornado.
+
+```sh
+npm run lint
 ```
