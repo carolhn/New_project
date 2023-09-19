@@ -1,4 +1,4 @@
-## Configuração Inicial de um Projeto
+## Configuração Inicial de um Projeto ⚙️
 
 ## Contexto do projeto:
 
@@ -172,6 +172,8 @@ Agora, você pode executar o lint do seu projeto ou executar uma correção auto
 npm run lint
 npm run lint-fix
 ```
+
+</details>
 
 ## Contato:
 
