@@ -175,6 +175,83 @@ npm run lint-fix
 
 </details>
 
+<details>
+  <summary><strong>3. Configurando o Prettier.</strong></summary>
+Prettier é um formatador de código opinativo e, em conjunto com o ESLint, forma uma parceria perfeita para nós, desenvolvedores.
+
+### 3.1 Instalação e Configuração do Prettier.
+
+Comece instalando o Prettier no seu projeto com o seguinte comando:
+
+```sh
+npx npm install prettier -D
+```
+
+### 3.2 Criando o arquivo .prettierrc.
+
+Na raiz do seu projeto, crie um arquivo chamado .prettierrc com uma configuração inicial do Prettier. Você pode adicionar as seguintes configurações:
+
+```sh
+{
+  "semi": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 80,
+  "arrowParens": "avoid"
+}
+```
+
+#### ⚠️ATENÇÃO⚠️
+
+É fundamental que extensão Prettier – Code Formatter esteja instalada no VSCode, pois permitirá a formatação automática do código ao salvar o arquivo.
+
+### 3.3 Criando o arquivo .prettierrc.
+
+Na raiz do seu projeto, crie um arquivo chamado .prettierrc com uma configuração inicial do Prettier. Você pode adicionar as seguintes configurações:
+
+```sh
+{
+  "semi": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "printWidth": 80,
+  "arrowParens": "avoid"
+}
+```
+
+### 3.4 Configurando o Prettier para trabalhar com ESLint.
+
+Com ESLint e Prettier já instalados, instale esses dois pacotes também:
+
+```sh
+npm install eslint-config-prettier@6.15.0 eslint-plugin-prettier@3.2.0 --save-dev
+```
+
+### 3.5 Ajustar o arquivo .eslintrc.
+
+```sh
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-console": "warn",
+    "prettier/prettier": "error"
+  }
+```
+
+</details>
+
 ## Contato:
 
 [![Linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/caroline-nunes-devfullstack/)
