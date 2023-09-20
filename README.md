@@ -280,16 +280,27 @@ PROJECT-CONFIG-BASE/
 
 #### 5.2 Explicação de cada pasta.
 
-```sh
-src/: Esta é a pasta raiz do código-fonte.
-api/: Esta pasta contém os principais componentes relacionados à lógica da aplicação.
-database/: Esta pasta contém configurações, migrações, modelos e seeders relacionados ao banco de dados da aplicação.
-tests/: Aqui, você pode criar testes unitários e de integração para garantir a qualidade do código.
-```
+-- src/: Esta é a pasta raiz do código-fonte.
 
-Outros arquivos e pastas incluem as dependências do projeto `node_modules/`, informações do projeto `package.json, package-lock.json`, configurações de lint e formatação `eslintignore, .eslintrc, .prettierrc, .editorconfig`, configurações TypeScript `tsconfig.json`, um arquivo `.gitignore` para ignorar arquivos não rastreados pelo Git e um arquivo `README.md` para documentar seu projeto.
+-- api/: Esta pasta contém os principais componentes relacionados à lógica da aplicação.
+
+-- database/: Esta pasta contém configurações, migrações, modelos e seeders relacionados ao banco de dados da aplicação.
+
+-- utils/: Esta pasta contém utilitários ou funções de uso geral.
+
+-- tests/: Aqui, são os testes unitários e de integração para garantir a qualidade do código.
+
+##### Outros arquivos e pastas incluem:
+
+`node_modules/`: Dependências do projeto.
+`package.json e package-lock.json``: Informações do projeto e dependências.
+`eslintignore, .eslintrc, .prettierrc, .editorconfig`Configurações de lint e formatação.`tsconfig.json`: Configuração TypeScript.
+`.gitignore`: Ignora arquivos não rastreados pelo Git.
+`README.md`: Documentação do projeto.
 
 #### 5.2 Ajustar o arquivo package.json.
+
+Aqui, vamos atualizar o script "dev" para utilizar a ferramenta 'ts-node-dev' após mover o arquivo server.ts para uma nova localização.
 
 ```sh
 {
