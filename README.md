@@ -280,22 +280,23 @@ PROJECT-CONFIG-BASE/
 
 #### 5.2 Explicação de cada pasta.
 
--- src/: Esta é a pasta raiz do código-fonte.
+- src/: Esta é a pasta raiz do código-fonte.
 
--- api/: Esta pasta contém os principais componentes relacionados à lógica da aplicação.
+- api/: Esta pasta contém os principais componentes relacionados à lógica da aplicação.
 
--- database/: Esta pasta contém configurações, migrações, modelos e seeders relacionados ao banco de dados da aplicação.
+- database/: Esta pasta contém configurações, migrações, modelos e seeders relacionados ao banco de dados da aplicação.
 
--- utils/: Esta pasta contém utilitários ou funções de uso geral.
+- utils/: Esta pasta contém utilitários ou funções de uso geral.
 
--- tests/: Aqui, são os testes unitários e de integração para garantir a qualidade do código.
+- tests/: Aqui, são os testes unitários e de integração para garantir a qualidade do código.
 
-##### Outros arquivos e pastas incluem:
+#### Outros arquivos e pastas incluem:
 
-`node_modules/`: Dependências do projeto.
-`package.json e package-lock.json``: Informações do projeto e dependências.
-`eslintignore, .eslintrc, .prettierrc, .editorconfig`Configurações de lint e formatação.`tsconfig.json`: Configuração TypeScript.
-`.gitignore`: Ignora arquivos não rastreados pelo Git.
+`node_modules/`: Dependências do projeto.</br>
+`package.json e package-lock.json``: Informações do projeto e dependências.</br>
+`eslintignore, .eslintrc, .prettierrc, .editorconfig`Configurações de lint e formatação.</br>
+`tsconfig.json`: Configuração TypeScript.</br>
+`.gitignore`: Ignora arquivos não rastreados pelo Git.</br>
 `README.md`: Documentação do projeto.
 
 #### 5.2 Ajustar o arquivo package.json.
