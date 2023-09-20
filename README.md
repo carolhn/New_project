@@ -293,7 +293,7 @@ PROJECT-CONFIG-BASE/
 #### Outros arquivos e pastas incluem:
 
 `node_modules/`: Dependências do projeto.</br>
-`package.json e package-lock.json``: Informações do projeto e dependências.</br>
+`package.json e package-lock.json`: Informações do projeto e dependências.</br>
 `eslintignore, .eslintrc, .prettierrc, .editorconfig`Configurações de lint e formatação.</br>
 `tsconfig.json`: Configuração TypeScript.</br>
 `.gitignore`: Ignora arquivos não rastreados pelo Git.</br>
@@ -301,7 +301,7 @@ PROJECT-CONFIG-BASE/
 
 #### 5.2 Ajustar o arquivo package.json.
 
-Aqui, vamos atualizar o script "dev" para utilizar a ferramenta 'ts-node-dev' após mover o arquivo server.ts para uma nova localização.
+Aqui, vamos atualizar o script "dev" para utilizar a ferramenta `ts-node-dev` após mover o arquivo server.ts para uma nova localização.
 
 ```sh
 {
