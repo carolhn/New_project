@@ -26,7 +26,7 @@ Para rodar a aplicação em sua maquina.
   <summary><strong>1. Configuração Inicial da Aplicação.</strong></summary>
 Vamos começar configurando sua aplicação do zero.
 
-### 1.1 Inicializando o Node Package.json.
+#### 1.1 Inicializando o Node Package.json.
 
 Primeiro, inicie sua aplicação criando o arquivo package.json, que ajuda a gerenciar os pacotes do seu projeto.
 
@@ -34,7 +34,7 @@ Primeiro, inicie sua aplicação criando o arquivo package.json, que ajuda a ger
 npm init -y
 ```
 
-### 1.2 Instalação do Typescript.
+#### 1.2 Instalação do Typescript.
 
 Como nosso código final será convertido em JavaScript antes de ser publicado online, vamos instalar o TypeScript no ambiente de desenvolvimento.
 
@@ -42,7 +42,7 @@ Como nosso código final será convertido em JavaScript antes de ser publicado o
 npm install typescript ts-node-dev @types/node tsconfig-paths -D
 ```
 
-### 1.3 Configurando o TypeScript.
+#### 1.3 Configurando o TypeScript.
 
 A seguir, configure o TypeScript para o seu projeto. Isso envolve a criação do arquivo tsconfig.json com as configurações necessárias.
 
@@ -50,7 +50,7 @@ A seguir, configure o TypeScript para o seu projeto. Isso envolve a criação do
 npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true
 ```
 
-### 1.4 Configurando o .gitignore
+#### 1.4 Configurando o .gitignore
 
 Para manter seu controle de versão limpo e evitar a inclusão acidental de arquivos desnecessários ou sensíveis, crie e configure o arquivo .gitignore.
 
@@ -60,7 +60,7 @@ Para manter seu controle de versão limpo e evitar a inclusão acidental de arqu
   <summary><strong>2. Compilando o Projeto.</strong></summary>
 Nesta seção, vamos compilar o projeto e executá-lo.
 
-### 2.1 Criando a Estrutura do Projeto.
+#### 2.1 Criando a Estrutura do Projeto.
 
 Começaremos criando a estrutura básica do projeto. Execute os seguintes comandos para criar a pasta src e o arquivo server.ts:
 
@@ -69,7 +69,7 @@ mkdir src
 touch src/server.ts
 ```
 
-### 2.2 Compilando o Typescript.
+#### 2.2 Compilando o Typescript.
 
 Dentro do arquivo src/server.ts, adicione o seguinte código que será compilado:
 
@@ -77,7 +77,7 @@ Dentro do arquivo src/server.ts, adicione o seguinte código que será compilado
 console.log('Hello World!')
 ```
 
-### 2.3 Executando o Compilador TypeScript.
+#### 2.3 Executando o Compilador TypeScript.
 
 Agora, vamos executar o comando tsc para compilar o código TypeScript. Ele usará as configurações definidas no arquivo tsconfig.json no diretório atual:
 
@@ -85,7 +85,7 @@ Agora, vamos executar o comando tsc para compilar o código TypeScript. Ele usar
 npx tsc
 ```
 
-### 2.4 Executando o Código Compilado.
+#### 2.4 Executando o Código Compilado.
 
 O código compilado será gerado na pasta build. Para executar a aplicação, use o seguinte comando:
 
@@ -93,7 +93,7 @@ O código compilado será gerado na pasta build. Para executar a aplicação, us
 node build/server.js
 ```
 
-### 2.5 Criando um Script de Desenvolvimento.
+#### 2.5 Criando um Script de Desenvolvimento.
 
 Para facilitar o desenvolvimento, utilizaremos a biblioteca ts-node-dev. Vamos criar um novo script no arquivo package.json para executar o projeto com o ts-node-dev:
 
@@ -102,7 +102,7 @@ Para facilitar o desenvolvimento, utilizaremos a biblioteca ts-node-dev. Vamos c
   "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts"
 ```
 
-### 2.5 Executando o Servidor em Modo de Desenvolvimento.
+#### 2.5 Executando o Servidor em Modo de Desenvolvimento.
 
 Finalmente, no terminal, execute o comando a seguir para iniciar o servidor em modo de desenvolvimento:
 
@@ -116,7 +116,7 @@ npm run dev
   <summary><strong>3. Configurando o ESLint.</strong></summary>
 O ESLint é uma ferramenta de linting JavaScript que permite aplicar um conjunto de padrões de estilo, formatação e codificação ao seu código.
 
-### 3.1 Instalação e Configuração do ESLint
+#### 3.1 Instalação e Configuração do ESLint
 
 Comece instalando o ESLint no seu projeto com o seguinte comando:
 
@@ -124,7 +124,7 @@ Comece instalando o ESLint no seu projeto com o seguinte comando:
 npx npm install --save-dev eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin
 ```
 
-### 3.2 Criando o arquivo .eslintrc
+#### 3.2 Criando o arquivo .eslintrc
 
 Na raiz do seu projeto, crie um arquivo chamado .eslintrc com uma configuração inicial do ESLint. Você pode adicionar as seguintes configurações:
 
@@ -143,7 +143,7 @@ Na raiz do seu projeto, crie um arquivo chamado .eslintrc com uma configuração
 }
 ```
 
-### 3.3 Criando o arquivo .eslintignore
+#### 3.3 Criando o arquivo .eslintignore
 
 Crie um arquivo chamado .eslintignore e adicione os seguintes comandos para evitar que determinados diretórios e arquivos sejam verificados pelo ESLint:
 
@@ -154,7 +154,7 @@ build
 /*.js
 ```
 
-### 3.4 Criando um Script de Desenvolvimento.
+#### 3.4 Criando um Script de Desenvolvimento.
 
 Adicione scripts no arquivo package.json para executar o lint e corrigir automaticamente os problemas:
 
@@ -164,7 +164,7 @@ Adicione scripts no arquivo package.json para executar o lint e corrigir automat
   "lint-fix": "eslint . --ext .ts --fix"
 ```
 
-### 3.5 Executando o Lint.
+#### 3.5 Executando o Lint.
 
 Agora, você pode executar o lint do seu projeto ou executar uma correção automática dos problemas com os seguintes comandos:
 
@@ -176,10 +176,10 @@ npm run lint-fix
 </details>
 
 <details>
-  <summary><strong>3. Configurando o Prettier.</strong></summary>
-Prettier é um formatador de código opinativo e, em conjunto com o ESLint, forma uma parceria perfeita para nós, desenvolvedores.
+  <summary><strong>4. Configurando o Prettier.</strong></summary>
+O Prettier é um formatador de código opinativo e, em conjunto com o ESLint, forma uma parceria perfeita para nós, desenvolvedores.
 
-### 3.1 Instalação e Configuração do Prettier.
+#### 3.1 Instalação e Configuração do Prettier.
 
 Comece instalando o Prettier no seu projeto com o seguinte comando:
 
@@ -187,7 +187,7 @@ Comece instalando o Prettier no seu projeto com o seguinte comando:
 npx npm install prettier -D
 ```
 
-### 3.2 Criando o arquivo .prettierrc.
+#### 3.2 Criando o arquivo .prettierrc
 
 Na raiz do seu projeto, crie um arquivo chamado .prettierrc com uma configuração inicial do Prettier. Você pode adicionar as seguintes configurações:
 
@@ -201,33 +201,21 @@ Na raiz do seu projeto, crie um arquivo chamado .prettierrc com uma configuraç�
 }
 ```
 
-#### ⚠️ATENÇÃO⚠️
+##### ⚠️ATENÇÃO⚠️
 
-É fundamental que extensão Prettier – Code Formatter esteja instalada no VSCode, pois permitirá a formatação automática do código ao salvar o arquivo.
+É fundamental que a extensão "Prettier - Code Formatter" esteja instalada no VSCode, pois permitirá a formatação automática do código ao salvar o arquivo.
 
-### 3.3 Criando o arquivo .prettierrc.
+#### 3.3 Configurando o Prettier para trabalhar com ESLint.
 
-Na raiz do seu projeto, crie um arquivo chamado .prettierrc com uma configuração inicial do Prettier. Você pode adicionar as seguintes configurações:
-
-```sh
-{
-  "semi": true,
-  "trailingComma": "all",
-  "singleQuote": true,
-  "printWidth": 80,
-  "arrowParens": "avoid"
-}
-```
-
-### 3.4 Configurando o Prettier para trabalhar com ESLint.
-
-Com ESLint e Prettier já instalados, instale esses dois pacotes também:
+Com o ESLint e o Prettier já instalados, instale também esses dois pacotes:
 
 ```sh
 npm install eslint-config-prettier@6.15.0 eslint-plugin-prettier@3.2.0 --save-dev
 ```
 
-### 3.5 Ajustar o arquivo .eslintrc.
+#### 3.5 Ajustar o arquivo .eslintrc
+
+Ajuste o arquivo .eslintrc da seguinte forma para que o ESLint e o Prettier funcionem em conjunto:
 
 ```sh
 {
