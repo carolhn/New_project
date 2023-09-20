@@ -102,7 +102,7 @@ Para facilitar o desenvolvimento, utilizaremos a biblioteca ts-node-dev. Vamos c
   "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts"
 ```
 
-#### 2.5 Executando o Servidor em Modo de Desenvolvimento.
+#### 2.6 Executando o Servidor em Modo de Desenvolvimento.
 
 Finalmente, no terminal, execute o comando a seguir para iniciar o servidor em modo de desenvolvimento:
 
@@ -179,7 +179,7 @@ npm run lint-fix
   <summary><strong>4. Configurando o Prettier.</strong></summary>
 O Prettier é um formatador de código opinativo e, em conjunto com o ESLint, forma uma parceria perfeita para nós, desenvolvedores.
 
-#### 3.1 Instalação e Configuração do Prettier.
+#### 4.1 Instalação e Configuração do Prettier.
 
 Comece instalando o Prettier no seu projeto com o seguinte comando:
 
@@ -187,7 +187,7 @@ Comece instalando o Prettier no seu projeto com o seguinte comando:
 npx npm install prettier -D
 ```
 
-#### 3.2 Criando o arquivo .prettierrc
+#### 4.2 Criando o arquivo .prettierrc
 
 Na raiz do seu projeto, crie um arquivo chamado .prettierrc com uma configuração inicial do Prettier. Você pode adicionar as seguintes configurações:
 
@@ -205,7 +205,7 @@ Na raiz do seu projeto, crie um arquivo chamado .prettierrc com uma configuraç�
 
 É fundamental que a extensão "Prettier - Code Formatter" esteja instalada no VSCode, pois permitirá a formatação automática do código ao salvar o arquivo.
 
-#### 3.3 Configurando o Prettier para trabalhar com ESLint.
+#### 4.3 Configurando o Prettier para trabalhar com ESLint.
 
 Com o ESLint e o Prettier já instalados, instale também esses dois pacotes:
 
@@ -213,7 +213,7 @@ Com o ESLint e o Prettier já instalados, instale também esses dois pacotes:
 npm install eslint-config-prettier@6.15.0 eslint-plugin-prettier@3.2.0 --save-dev
 ```
 
-#### 3.5 Ajustar o arquivo .eslintrc
+#### 4.4 Ajustar o arquivo .eslintrc
 
 Ajuste o arquivo .eslintrc da seguinte forma para que o ESLint e o Prettier funcionem em conjunto:
 
@@ -235,6 +235,66 @@ Ajuste o arquivo .eslintrc da seguinte forma para que o ESLint e o Prettier func
   "rules": {
     "no-console": "warn",
     "prettier/prettier": "error"
+  }
+```
+
+</details>
+
+<details>
+  <summary><strong>5. Estrutura de pastas.</strong></summary>
+
+#### 5.1 Criando a Estrutura de Pastas.
+
+A estrutura de pastas é uma parte fundamental da organização do projeto. Ela ajuda a manter seu código organizado e facilita a navegação e o desenvolvimento da aplicação. Abaixo está a estrutura de pastas desenvolvida nesse projeto:
+
+```sh
+PROJECT-CONFIG-BASE/
+|-- src/
+|   |-- api/
+|   |   |-- controllers/
+|   |   |-- routes/
+|   |   |-- middleware/
+|   |   |-- services/
+|   |   |--server.ts
+|   |-- database/
+|   |   |-- config/
+|   |   |-- migrations/
+|   |   |-- models/
+|   |   |-- seeders/
+|   |-- utils/
+|-- tests/
+|   |-- unit/
+|   |-- integration/
+|-- node_modules/
+|-- package.json
+|-- package-lock.json
+|-- .gitignore
+|-- .eslintignore
+|-- .eslintrc
+|-- .prettierrc
+|-- .editorconfig
+|-- tsconfig.json
+|-- README.md
+
+```
+
+#### 5.2 Explicação de cada pasta.
+
+```sh
+src/: Esta é a pasta raiz do código-fonte.
+api/: Esta pasta contém os principais componentes relacionados à lógica da aplicação.
+database/: Esta pasta contém configurações, migrações, modelos e seeders relacionados ao banco de dados da aplicação.
+tests/: Aqui, você pode criar testes unitários e de integração para garantir a qualidade do código.
+```
+
+Outros arquivos e pastas incluem as dependências do projeto `node_modules/`, informações do projeto `package.json, package-lock.json`, configurações de lint e formatação `eslintignore, .eslintrc, .prettierrc, .editorconfig`, configurações TypeScript `tsconfig.json`, um arquivo `.gitignore` para ignorar arquivos não rastreados pelo Git e um arquivo `README.md` para documentar seu projeto.
+
+#### 5.2 Ajustar o arquivo package.json.
+
+```sh
+{
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/api/server.ts",
   }
 ```
 
