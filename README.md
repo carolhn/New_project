@@ -18,7 +18,7 @@ Para rodar a aplicação em sua maquina.
    <code>npm install</code>
 
 4. Comando para executar o app</br>
-   <code>npm start</code>
+   <code>npm run dev</code>
 
 ## Passo a Passo:
 
@@ -299,7 +299,7 @@ PROJECT-CONFIG-BASE/
 `.gitignore`: Ignora arquivos não rastreados pelo Git.</br>
 `README.md`: Documentação do projeto.
 
-#### 5.2 Ajustar o arquivo package.json.
+#### 5.3 Ajustar o arquivo package.json.
 
 Aqui, vamos atualizar o script "dev" para utilizar a ferramenta `ts-node-dev` após mover o arquivo server.ts para uma nova localização.
 
