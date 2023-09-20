@@ -2,11 +2,11 @@
 
 ## Contexto do projeto:
 
-Este repositório é um guia de configuração básica para iniciar um projeto. Abaixo, temos o passo a passo da configuração realizada neste repositório.
+Este repositório serve como um guia para a configuração básica de um novo projeto. Aqui, você encontrará um passo a passo detalhado das configurações realizadas neste repositório, que servem como uma estrutura inicial para desenvolvimento.
 
 ## Instalação Local:
 
-Para rodar a aplicação em sua maquina.
+Para executar a aplicação em sua máquina local, siga os passos abaixo:
 
 1. Clone o repositorio. Use o comando:</br>
    <code>git clone git@github.com:carolhn/Project-config-base.git</code></br>
@@ -20,7 +20,9 @@ Para rodar a aplicação em sua maquina.
 4. Comando para executar o app</br>
    <code>npm run dev</code>
 
-## Passo a Passo:
+## Passo a Passo 🚀:
+
+Aqui, você encontrará um guia completo dos passos executados neste projeto, oferecendo uma visão abrangente das configurações e da estrutura detalhada.
 
 <details>
   <summary><strong>1. Configuração Inicial da Aplicação.</strong></summary>
