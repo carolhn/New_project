@@ -312,9 +312,14 @@ Aqui, vamos atualizar o script "dev" para utilizar a ferramenta `ts-node-dev` ap
   }
 ```
 
-#### 5.4 Simplificando as Importações.
+</details>
+
+<details>
+  <summary><strong>6. Simplificando as Importações.</strong></summary>
 
 Uma maneira eficaz de otimizar o processo de importação de arquivos em nosso projeto é configurar um recurso que simplifica esse procedimento.
+
+#### 6.1 Ajustando o arquivo .tsconfig
 
 Começamos essa configuração no arquivo `tsconfig.json`, onde definimos o objeto paths. Esse objeto serve como uma espécie de atalho para especificar caminhos de importação no projeto:
 
@@ -326,9 +331,7 @@ Começamos essa configuração no arquivo `tsconfig.json`, onde definimos o obje
   "@utils/*": ["src/utils/*"]
 ```
 
-#### 5.5 Configurando o Uso do tsconfig-paths.
-
-Para implementar o uso eficaz do tsconfig-paths, siga estas etapas:
+#### 6.2 Configurando o Uso do tsconfig-paths.
 
 No terminal, na pasta do projeto, execute o seguinte comando para instalar a biblioteca tsconfig-paths como dependência de desenvolvimento:
 
