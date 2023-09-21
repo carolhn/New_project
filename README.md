@@ -343,7 +343,60 @@ Após a instalação do tsconfig-paths, ajuste o script "dev" em seu arquivo pac
 
 ```sh
 "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/api/server.ts"
+```
 
+</details>
+
+<details>
+  <summary><strong>7. Instalação de dependências.</strong></summary>
+
+#### 7.1 Instalando o Express e Outras dependências.
+
+Para adicionar as dependências necessárias ao seu projeto, execute o seguinte comando no terminal:
+
+```sh
+npm install express cors express-async-errors
+```
+
+#### 7.2 Instalação das Tipagens.
+
+Para garantir que seu projeto tenha acesso às definições de tipos (tipagens) necessárias, você pode instalá-las usando o seguinte comando no terminal:
+
+```sh
+npm install --save-dev @types/express @types/cors
+```
+
+</details>
+
+<details>
+  <summary><strong>8. Criação do Servidor Node.js com Express</strong></summary>
+
+Vamos criar de um servidor Node.js usando o framework Express. O servidor será configurado para lidar com solicitações HTTP, permitindo que você desenvolva um aplicativo web.
+
+#### Arquivos ajustados.
+
+- `server.ts`: Este arquivo é o ponto de entrada do servidor. Ele importa o Express, o middleware CORS, configura as rotas e inicia o servidor na porta 3333.
+
+- `index.ts`: Este arquivo define as rotas principais do aplicativo. Atualmente, ele possui uma rota simples que responde com uma mensagem "Hello World" quando acessada.
+
+#### Executando o Servidor.
+
+Para iniciar o servidor, execute o seguinte comando no terminal, na pasta raiz do projeto:
+
+```sh
+npm run dev
+```
+
+##### Você verá a seguinte saída no terminal:</br>
+
+`Server is running on port 3333 🚀`
+
+##### Testando o Servidor
+
+Após iniciar o servidor, você pode testá-lo abrindo um navegador e acessando o seguinte URL:
+
+```sh
+http://localhost:3333/
 ```
 
 </details>
@@ -354,3 +407,7 @@ Após a instalação do tsconfig-paths, ajuste o script "dev" em seu arquivo pac
 [![Instagran](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/caarolhn/)
 [![Whatsapp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/48988037114)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nunescaroline905@gmail.com)
+
+```
+
+```
