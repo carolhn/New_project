@@ -116,7 +116,7 @@ npm run dev
 
 <details>
   <summary><strong>3. Configurando o ESLint.</strong></summary>
-O ESLint é uma ferramenta de linting JavaScript que permite aplicar um conjunto de padrões de estilo, formatação e codificação ao seu código.
+O ESLint é uma ferramenta de linter JavaScript que permite aplicar um conjunto de padrões de estilo, formatação e codificação ao seu código.
 
 #### 3.1 Instalação e Configuração do ESLint
 
@@ -373,13 +373,13 @@ npm install --save-dev @types/express @types/cors
 
 Vamos criar de um servidor Node.js usando o framework Express. O servidor será configurado para lidar com solicitações HTTP, permitindo que você desenvolva um aplicativo web.
 
-#### Arquivos ajustados.
+#### 8.1 Arquivos ajustados.
 
 - `server.ts`: Este arquivo é o ponto de entrada do servidor. Ele importa o Express, o middleware CORS, configura as rotas e inicia o servidor na porta 3333.
 
-- `index.ts`: Este arquivo define as rotas principais do aplicativo. Atualmente, ele possui uma rota simples que responde com uma mensagem "Hello World" quando acessada.
+- `routes/index.ts`: Este arquivo define as rotas principais do aplicativo. Atualmente, ele possui uma rota simples que responde com uma mensagem "Hello World" quando acessada.
 
-#### Executando o Servidor.
+#### 8.2 Executando o Servidor.
 
 Para iniciar o servidor, execute o seguinte comando no terminal, na pasta raiz do projeto:
 
@@ -387,11 +387,11 @@ Para iniciar o servidor, execute o seguinte comando no terminal, na pasta raiz d
 npm run dev
 ```
 
-##### Você verá a seguinte saída no terminal:</br>
+Você verá a seguinte saída no terminal:</br>
 
 `Server is running on port 3333 🚀`
 
-##### Testando o Servidor
+Testando o Servidor:</br>
 
 Após iniciar o servidor, você pode testá-lo abrindo um navegador e acessando o seguinte URL:
 
@@ -407,7 +407,3 @@ http://localhost:3333/
 [![Instagran](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/caarolhn/)
 [![Whatsapp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/48988037114)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nunescaroline905@gmail.com)
-
-```
-
-```
