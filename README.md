@@ -404,13 +404,13 @@ http://localhost:3333/
 <details>
   <summary><strong>9. Tratamento de Erros Personalizados</strong></summary>
 
-### 9.1 Criação de Erro Personalizado
+#### 9.1 Criação de Erro Personalizado
 
 A classe `utils/errors/AppError` é utilizada para criar objetos de erro personalizados, permitindo a associação de mensagens e códigos de status HTTP específicos. Essa abordagem é fundamental para tratar erros de maneira precisa em sua aplicação, ao mesmo tempo que fornece informações detalhadas sobre a natureza do erro.
 
-### 9.2 Middleware de Tratamento de Erros
+#### 9.2 Middleware de Tratamento de Erros
 
-Dentro da pasta `middlewares`, foi desenvolvido um código para lidar com erros na aplicação. Esse middleware é invocado a partir do arquivo `server.ts` e desempenha um papel essencial na captura e tratamento de erros durante a execução do servidor.
+Dentro da pasta `middlewares`, foi desenvolvido um código para lidar com erros na aplicação. Esse middleware é chamado no arquivo `server.ts` e desempenha um papel essencial na captura e tratamento de erros durante a execução do servidor.
 
 </details>
 
