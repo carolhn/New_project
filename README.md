@@ -312,6 +312,37 @@ Aqui, vamos atualizar o script "dev" para utilizar a ferramenta `ts-node-dev` ap
   }
 ```
 
+#### 5.4 Simplificando as Importações.
+
+Uma maneira eficaz de otimizar o processo de importação de arquivos em nosso projeto é configurar um recurso que simplifica esse procedimento.
+
+Começamos essa configuração no arquivo `tsconfig.json`, onde definimos o objeto paths. Esse objeto serve como uma espécie de atalho para especificar caminhos de importação no projeto:
+
+```sh
+"baseUrl": "./",
+"paths": {
+  "@api/*": ["src/api/*"],
+  "@database/*": ["src/database/*"],
+  "@utils/*": ["src/utils/*"]
+```
+
+#### 5.5 Configurando o Uso do tsconfig-paths.
+
+Para implementar o uso eficaz do tsconfig-paths, siga estas etapas:
+
+No terminal, na pasta do projeto, execute o seguinte comando para instalar a biblioteca tsconfig-paths como dependência de desenvolvimento:
+
+```sh
+npm install --save-dev tsconfig-paths
+```
+
+Após a instalação do tsconfig-paths, ajuste o script "dev" em seu arquivo package.json para incluir a opção -r tsconfig-paths/register. O script "dev" deve ser configurado da seguinte maneira:
+
+```sh
+"dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/api/server.ts"
+
+```
+
 </details>
 
 ## Contato:
