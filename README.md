@@ -387,11 +387,11 @@ Para iniciar o servidor, execute o seguinte comando no terminal, na pasta raiz d
 npm run dev
 ```
 
-Você verá a seguinte saída no terminal:</br>
+**Você verá a seguinte saída no terminal:**
 
 `Server is running on port 3333 🚀`
 
-Testando o Servidor:</br>
+**Testando o Servidor:**
 
 Após iniciar o servidor, você pode testá-lo abrindo um navegador e acessando o seguinte URL:
 
